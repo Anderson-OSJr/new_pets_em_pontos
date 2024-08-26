@@ -11,13 +11,13 @@ const Amigurumis = () => {
   return (
     <>
       <div className="w-full flex justify-center mb-32">
-        <div className="flex flex-wrap w-full sm:w-10/12 max-w-screen-lg justify-center gap-3">
+        <div className="flex flex-wrap w-full sm:w-10/12 max-w-screen-lg justify-center gap-3 md:gap-8">
           {fotos.map((foto) => (
             <div key={foto.id} className="mb-5">
               <Image
                 src={foto.href}
                 alt={foto.title}
-                width={250}
+                width={300}
                 height={300}
                 className="rounded-sm shadow-md shadow-violet-300"
               />
