@@ -80,7 +80,7 @@ const Amigurumi = () => {
     { id: 62, title: "Octablue", href: "/octoblue.png" },
     { id: 63, title: "Papa Emeritus", href: "/papaemeritus.png" },
     { id: 64, title: "Bob Esponja", href: "/bob_esponja.png" },
-    { id: 65, title: "Cazé", href: "/case.png" },
+    { id: 65, title: "Cazé TV", href: "/case.png" },
     { id: 66, title: "Mais do Porquinho", href: "/porquinho1.png" },
 
     { id: 67, title: "Sagrada Família", href: "/sagradafamilia1_1.png" },
