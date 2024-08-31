@@ -3,7 +3,7 @@ import Image from "next/image";
 const Amigurumi = () => {
   const amigurumis: { id: number; title: string; href: string }[] = [
     { id: 1, title: "Soniquinho", href: "/sonic.png" },
-    { id: 2, title: "Foxtrot", href: "/raposinho.png" },
+    { id: 2, title: "Foxtrot", href: "/foxtrot.png" },
     { id: 3, title: "Pikashultz", href: "/pikachu1.png" },
     { id: 4, title: "Mr Bita", href: "/bita1.png" },
     { id: 5, title: "Coelhinhos", href: "/coelhinhos1.png" },
