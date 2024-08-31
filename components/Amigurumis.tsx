@@ -14,10 +14,10 @@ const Amigurumi = () => {
     { id: 9, title: "A turminha", href: "/turminha2.png" },
     { id: 10, title: "As Superpoderosas", href: "/superpoderosas.png" },
     { id: 11, title: "Mais turminha", href: "/turminha1.png" },
-    { id: 12, title: "Galerinha do Bita", href: "/turminha_pgrossa2.png" },
+    { id: 12, title: "Bita e os amiguinhos", href: "/turminha_pgrossa2.png" },
 
-    { id: 13, title: "Ursinho Blue", href: "/blue_bears2.png" },
-    { id: 14, title: "Ursinhos Blue", href: "/blue_bears1.png" },
+    { id: 13, title: "Cat Blue", href: "/blue_bears2.png" },
+    { id: 14, title: "Cat Blue", href: "/blue_bears1.png" },
     { id: 15, title: "Mordedor Blue", href: "/blue_bears3.png" },
     { id: 16, title: "Dino Saulo", href: "/dinossaulo2.png" },
     { id: 17, title: "Elefantinho da Ju", href: "/elefantinho1.png" },
@@ -25,8 +25,8 @@ const Amigurumi = () => {
 
     { id: 19, title: "Macaquinha porta retrato", href: "/macaquinha.png" },
     { id: 20, title: "Frida", href: "/frida.png" },
-    { id: 21, title: "Miss Pig", href: "/misspig1.png" },
-    { id: 22, title: "Miss Pig vai passear", href: "/misspig2.png" },
+    { id: 21, title: "Miss Piggy", href: "/misspig1.png" },
+    { id: 22, title: "Miss Piggy vai passear", href: "/misspig2.png" },
     { id: 23, title: "Florks", href: "/florks2.png" },
     { id: 24, title: "Heptapus", href: "/heptapus.png" },
 
@@ -38,7 +38,7 @@ const Amigurumi = () => {
     { id: 30, title: "Alfredo da Nanda", href: "/ursinho_nanda1.png" },
 
     { id: 31, title: "NSrª das Graças", href: "/nsgraca.png" },
-    { id: 32, title: "Mr Pig", href: "/porquinho3.png" },
+    { id: 32, title: "Zé Toicin", href: "/porquinho3.png" },
     { id: 33, title: "Pateta", href: "/pateta.png" },
     { id: 34, title: "Mestre Yoda", href: "/yoda1.png" },
     { id: 35, title: "Xepa", href: "/xepa.png" },
