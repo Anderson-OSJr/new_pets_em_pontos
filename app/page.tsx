@@ -1,16 +1,14 @@
-import Amigurumis from "@/components/Amigurumis";
-import MainNav from "@/components/MainNav";
-
-import Image from "next/image";
+import Amigurumi from "@/components/Amigurumis";
+import BottomBar from "@/components/BottomBar";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col items-center bg-violet-50">
-        <div className="md:mt-1">
-          <MainNav />
-          <Amigurumis />
-        </div>
+      <div className="bg-purple-100 pb-6 pt-2">
+        <Logo />
+        <Amigurumi />
+        <BottomBar />
       </div>
     </>
   );
