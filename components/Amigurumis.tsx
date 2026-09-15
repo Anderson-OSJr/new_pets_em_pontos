@@ -1,6 +1,11 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import { X } from "lucide-react";
 
 const Amigurumi = () => {
+  const [active, setActive] = useState("Todos");
+  const [selected, setSelected] = useState<{title: string; href: string} | null>(null);
   const amigurumis: { id: number; title: string; href: string }[] = [
     { id: 1, title: "Soniquinho", href: "/sonic.png" },
     { id: 2, title: "Foxtrot", href: "/foxtrot.png" },
@@ -117,33 +122,14 @@ const Amigurumi = () => {
     { id: 84, title: "Bob Minion", href: "/minion2.png" },
   ];
 
-  return (
-    <>
-      <div
-        className=" container rounded-md
-                    flex flex-wrap justify-center items-center
-                    mt-3 pt-2 pb-6 gap-6
-                    sm:w-[640px]                  
-                    md:w-[768px]
-                    lg:w-[1024px] 
-                    xl:w-[1280px] 
-                    bg-purple-950"
-      >
-        {amigurumis.map((amigurumi) => (
-          <div key={amigurumi.id}>
-            <Image
-              src={amigurumi.href}
-              alt={amigurumi.title}
-              width={300}
-              height={250}
-              className="rounded-xl border-2 border-purple-200 mt-4 mb-1"
-            />
-            <p className="text-purple-100 pl-4">{amigurumi.title}</p>
-          </div>
-        ))}
-      </div>
-    </>
-  );
+  const categories = ["Todos", "Personagens", "Bichinhos", "Datas especiais"];
+  const visible = active === "Todos" ? amigurumis : amigurumis.filter((item) => active === "Datas especiais" ? item.id >= 40 && item.id <= 49 : active === "Bichinhos" ? item.id > 12 && item.id < 25 : item.id <= 40 || item.id > 49);
+  return <section id="galeria" className="gallery-section">
+    <div className="section-heading"><div><span className="section-label">01 / galeria</span><h2>Feitos para<br /><em>morar na memória.</em></h2></div><p>Uma seleção de criações que nasceram de pedidos especiais, personagens queridos e da vontade de transformar fio em companhia.</p></div>
+    <div className="filter-row" aria-label="Filtrar galeria">{categories.map((category) => <button key={category} className={active === category ? "filter active" : "filter"} onClick={() => setActive(category)}>{category}</button>)}<span className="piece-count">{visible.length} peças</span></div>
+    <div className="masonry-grid">{visible.map((item, index) => <button className={`piece-card ${index % 7 === 0 ? "piece-card-featured" : ""}`} key={item.id} onClick={() => setSelected(item)} aria-label={`Ampliar ${item.title}`}><div className="piece-image"><Image src={item.href} alt={item.title} fill sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" /></div><span className="piece-caption">{item.title}<small>ver detalhe</small></span></button>)}</div>
+    {selected && <div className="lightbox" role="dialog" aria-modal="true" aria-label={selected.title} onClick={() => setSelected(null)}><div className="lightbox-content" onClick={(event) => event.stopPropagation()}><button className="close-button" onClick={() => setSelected(null)} aria-label="Fechar"><X size={22} /></button><div className="lightbox-image"><Image src={selected.href} alt={selected.title} fill sizes="90vw" /></div><p>{selected.title}</p></div></div>}
+  </section>;
 };
 
 export default Amigurumi;
